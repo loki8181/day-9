@@ -1,0 +1,151 @@
+prgm 1
+#include <stdio.h>
+int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1; 
+    } else {
+        return n * factorial(n - 1); 
+    }
+}
+
+int main() {
+    int num;
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        printf("Factorial of %d is %d\n", num, factorial(num));
+    }
+    return 0;
+}
+
+prgm 2
+include <stdio.h>
+int fibonacci(int n) {
+    if
+ (n == 0)
+        return 0; 
+    else if (n == 1)
+        return 1; 
+    else
+       # return fibonacci(n - 1) + fibonacci(n - 2); // Recursive case
+}
+
+int main() {
+    int n, i;
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", fibonacci(i));
+    }
+    printf("\n");
+   return 0;
+}
+
+prgm 3include <stdio.h>
+int fibonacci(int n) {
+    if
+#include <stdio.h>
+int reverseNumber(int num, int rev) {
+    if (num == 0)
+        return rev;
+    return reverseNumber(num / 10, rev * 10 + num % 10);
+}
+
+int main() {
+    int num, reversed;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    reversed = reverseNumber(num, 0);
+    printf("Reversed number: %d\n", reversed);
+    return 0;
+}
+
+prgm 4
+#include <stdio.h>
+int gcd(int a, int b) {
+    if (b == 0)
+        return a; 
+    else
+        return gcd(b, a % b); 
+}
+
+int main() {
+    int num1, num2;
+    printf("Enter two positive integers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("GCD of %d and %d is %d\n", num1, num2, gcd(num1, num2));
+    return 0;
+}
+
+prgm5
+#include <stdio.h>
+int sumOfDigits(int num) {
+    if (num == 0)
+        return 0; 
+    else
+        return (num % 10) + sumOfDigits(num / 10); // Recursive case
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (num < 0) {
+        num = -num;
+    }
+    printf("Sum of digits: %d\n", sumOfDigits(num));
+    return 0;
+}
+
+prgm 6
+#include <stdio.h>
+int power(int x, int y) {
+    if (y == 0)
+        return 1; 
+    else
+        return x * power(x, y - 1); 
+}
+
+int main() {
+    int base, exponent;
+
+    printf("Enter base and exponent: ");
+    scanf("%d %d", &base, &exponent);
+    if (exponent < 0) {
+        printf("This function does not support negative exponents.\n");
+    } else {
+        printf("%d^%d = %d\n", base, exponent, power(base, exponent));
+    }
+    return 0;
+}
+
+
+prgm 7
+#include <stdio.h>
+int countDigits(int num) {
+    if (num == 0)
+        return 0;
+    else
+        return 1 + countDigits(num / 10);
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (num == 0) {
+        printf("Number of digits: 1\n");
+    } else {
+        if (num < 0)
+            num = -num;
+        printf("Number of digits: %d\n", countDigits(num));
+    }
+    return 0;
+}
+
+
